@@ -1,0 +1,28 @@
+{:paths ["src"]
+
+ :deps
+ {org.clojure/clojure      {:mvn/version "1.11.1"}
+  org.clojure/core.async   {:mvn/version "1.6.681"}
+
+  ;; Direct FTDI USB access — same driver approach as pyftdi (WinUSB/libusbK via Zadig)
+  ;; Does NOT need the FTDI VCP driver, so the Python project is unaffected.
+  org.usb4java/usb4java    {:mvn/version "1.3.0"}
+
+  ;; Web server for the live browser UI
+  ring/ring-core           {:mvn/version "1.10.0"}
+  ring/ring-jetty-adapter  {:mvn/version "1.10.0"}
+
+  ;; HTML templating (server-side, no build step)
+  hiccup/hiccup            {:mvn/version "1.0.5"}
+
+  ;; JSON encoding for the /api/universe endpoint
+  cheshire/cheshire        {:mvn/version "5.12.0"}}
+
+ :aliases
+ {:dev
+  {:extra-deps
+   {nrepl/nrepl        {:mvn/version "1.1.0"}
+    cider/cider-nrepl  {:mvn/version "0.47.1"}}
+   :main-opts ["-m" "nrepl.cmdline"
+               "--middleware" "[cider.nrepl/cider-middleware]"
+               "--port" "7888"]}}}

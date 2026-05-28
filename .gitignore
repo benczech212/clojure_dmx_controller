@@ -1,0 +1,35 @@
+# Clojure / deps.edn
+.cpcache/
+.clj-kondo/
+.lsp/
+
+# Build outputs
+target/
+classes/
+
+# nREPL
+.nrepl-port
+.nrepl-history
+
+# Editor
+.calva/
+.idea/
+*.iml
+.vscode/
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs / temp
+*.log
+.clj-kondo/.cache/v1/clj/clojure-dmx.color.transit.json
+.clj-kondo/.cache/v1/clj/clojure-dmx.core.transit.json
+.clj-kondo/.cache/v1/clj/clojure-dmx.fixture.transit.json
+.clj-kondo/.cache/v1/clj/clojure-dmx.oscillator.transit.json
+.clj-kondo/.cache/v1/clj/clojure-dmx.serial.transit.json
+.clj-kondo/.cache/v1/clj/clojure-dmx.server.transit.json
+.clj-kondo/.cache/v1/clj/clojure-dmx.universe.transit.json
+.clj-kondo/.cache/v1/clj/user.transit.json
